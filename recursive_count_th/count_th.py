@@ -15,8 +15,8 @@ def count_th(word):
         else:
             return count_th(word[1:])
 
-''' Without Recursion '''
-def count(word, search):
+''' Or theres this hacky way using python list method lol '''
+def count_of_letters(word, search):
     return word.count(search)
     
     
