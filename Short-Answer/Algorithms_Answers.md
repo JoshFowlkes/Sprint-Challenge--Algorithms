@@ -2,7 +2,7 @@
 
 ## Exercise I
 
-a) While 'a' is less than 'n^3',  'a' will increment by 'n^2'. SO using an example of 'n=3', while 'a' is less than 27, this loop will run, so 'a' will increment from 0, 9, 18, 27, and thus the loop runs 3 times. So the loop will run 'n' number of times. So this would be a case of 'O(n)'.
+a) While 'a' is less than 'n^3',  'a' will increment by 'n^2'. SO using an example of 'n=3', while 'a' is less than 27, this loop will increment from 0, 9, 18, 27, and thus the loop runs 3 times. So the loop will run 'n' number of times. Fairly linear, so this would be a case of 'O(n)'.
 
 
 b) This one contains two loops. The for loop will run for i in range(n) and continue to increment by 1. Whereas the inner while loop will run within the for loop while j is less than n and double every time. Then will circle back to the for loop and repeat until the for loop has reached range(n). So the outer for loop is growing at a linear rate as it increments by 1. The inner while loop is doubling everytime. Since it is doubling everytime itll grow rapidly overtime, not as rapidly as it would if it was being squared(O(n^2)), and its faster than the linear O(n), so since it lies in between those two, it should be growing at O(nlog(n)).
