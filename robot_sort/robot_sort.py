@@ -96,8 +96,47 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+
+        def bubble_start():
+            ''' Starts the bubble sort from the most left-rly position '''
+            while self.can_move_left() == True:
+                self.move_left()
+                self.set_light_on()
+            ''' Starting from the further left position,  '''
+        def bubble_sort():
+            while self.can_move_right() == True:
+                self.swap_item()
+                self.move_right()
+
+                ''' If the next item is greater in value '''    
+                if self.compare_item() == 1:
+                    self.swap_item()
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+                    self.set_light_off()
+
+                ''' if the next item is less in value '''
+                if self.compare_item()== - 1:
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+                
+                ''' if the next item is equal in value '''
+                if self.compare_item() == 0:
+                    self.swap_item()
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+
+        while self.light_is_on() == False:
+            bubble_sort()
+            bubble_start()
+            bubble_sort()
+
+
+        return self._list
+
 
 
 if __name__ == "__main__":
